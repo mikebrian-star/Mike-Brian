@@ -13,7 +13,7 @@
 
     .intro {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       padding: 60px;
       gap: 40px;
@@ -38,24 +38,20 @@
       color: #555;
     }
 
-   .slide {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: none;
-      background: #f5f5f5;
+    .slider {
+      flex: 1;
+      max-width: 100%;
+      position: relative;
+      overflow: visible;
     }
 
-
     .slide {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-contain: cover;
       display: none;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
     .slide.active {
@@ -82,11 +78,6 @@
       .intro {
         flex-direction: column;
         text-align: center;
-      }
-
-      .slider {
-        width: 100%;
-        height: 250px;
       }
     }
   </style>
@@ -140,4 +131,3 @@
 
 </body>
 </html>
-
