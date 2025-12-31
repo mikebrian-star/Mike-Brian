@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><b>B.S. MIKE</b></b></title>
-
+  <title>My Portfolio</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #f5f5f5;
+      color: #333;
     }
-
     .intro {
       display: flex;
       flex-wrap: wrap;
@@ -19,24 +18,19 @@
       background: white;
       align-items: flex-start;
     }
-
     .intro-text {
       flex: 1;
       min-width: 280px;
     }
-
     .intro-text h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
       color: #222;
     }
-
     .intro-text p {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #555;
     }
-
     .slider {
       flex: 1;
       min-width: 280px;
@@ -47,17 +41,14 @@
       align-items: center;
       background: #f5f5f5;
     }
-
     .slide {
       display: none;
       max-width: 100%;
       height: auto;
     }
-
     .slide.active {
       display: block;
     }
-
     .slider button {
       position: absolute;
       top: 50%;
@@ -70,65 +61,144 @@
       border-radius: 50%;
       z-index: 10;
     }
-
     .prev { left: 10px; }
     .next { right: 10px; }
-
+    #resume {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    #resume h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #222;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+    #resume h3 {
+      font-size: 1.3rem;
+      color: #444;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    #resume p {
+      line-height: 1.6;
+      margin: 5px 0;
+    }
+    #resume ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+    #resume a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    #resume a:hover {
+      text-decoration: underline;
+    }
+    #resume .download-links {
+      text-align: center;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+    #resume .download-links a {
+      margin: 0 15px;
+    }
     @media (max-width: 768px) {
       .intro {
         flex-direction: column;
         text-align: center;
       }
-
       .slider {
         max-width: 100%;
+      }
+      #resume {
+        padding: 20px;
+        margin: 30px auto;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <section class="intro">
-    <div class="intro-text">
-      <h1>Hello, I’m a Web Developer</h1>
-      <p>
-        I specialize in building clean, responsive websites, writing high-quality
-        academic content, and tutoring English with clarity and confidence.
-      </p>
-    </div>
+<section class="intro">
+  <div class="intro-text">
+    <h1>Hello, I’m a Web Developer</h1>
+    <p>I specialize in building clean, responsive websites, writing high-quality academic content, and tutoring English with clarity and confidence.</p>
+  </div>
+  <div class="slider">
+    <img src="images/slide1.jpg.JPG" class="slide active">
+    <img src="images/slide2.jpg.JPG" class="slide">
+    <img src="images/slide3.jpg.JPG" class="slide">
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
 
-    <div class="slider">
-      <img src="images/slide1.jpg.JPG" class="slide active">
-      <img src="images/slide2.jpg.JPG" class="slide">
-      <img src="images/slide3.jpg.JPG" class="slide">
+<section id="resume">
+  <h2>Resume</h2>
+  <div class="personal-info">
+    <p><strong>Name:</strong> Your Name</p>
+    <p><strong>Email:</strong> your.email@example.com</p>
+    <p><strong>Location:</strong> Nairobi, Kenya</p>
+    <p><strong>Website:</strong> <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a></p>
+  </div>
+  <div class="summary">
+    <h3>Professional Summary</h3>
+    <p>Web developer with experience building responsive websites, academic writing, and English tutoring. Skilled in front-end development, content creation, and delivering clear communication to students and clients.</p>
+  </div>
+  <div class="experience">
+    <h3>Experience</h3>
+    <p><strong>Freelance Web Developer</strong> | 2022–Present</p>
+    <ul>
+      <li>Built responsive websites for small businesses and personal projects.</li>
+      <li>Implemented basic SEO and optimized site performance.</li>
+      <li>Collaborated with clients to understand requirements and provide solutions.</li>
+    </ul>
+    <p><strong>English Tutor</strong> | 2020–Present</p>
+    <ul>
+      <li>Tutored students in English grammar, writing, and conversation.</li>
+      <li>Prepared lesson plans and adapted content to student needs.</li>
+      <li>Monitored progress and provided constructive feedback.</li>
+    </ul>
+  </div>
+  <div class="education">
+    <h3>Education</h3>
+    <p><strong>Bachelor of Science in Computer Science</strong>, University ABC | 2018–2022</p>
+    <p><strong>High School Diploma</strong>, XYZ High School | 2014–2018</p>
+  </div>
+  <div class="skills">
+    <h3>Skills</h3>
+    <ul>
+      <li>Front end web development UI</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React & Node.js basics</li>
+      <li>Responsive web design</li>
+      <li>Academic writing and research</li>
+      <li>English tutoring and lesson planning</li>
+    </ul>
+</section>
 
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-    </div>
-  </section>
-
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    let currentIndex = 0;
-
-    function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
-    }
-
-    document.querySelector('.next').onclick = () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    };
-
-    document.querySelector('.prev').onclick = () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    };
-
-    // 🔹 Automatic sliding removed
-  </script>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+  document.querySelector('.next').onclick = () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  };
+  document.querySelector('.prev').onclick = () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  };
+</script>
 
 </body>
 </html>
