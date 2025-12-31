@@ -13,12 +13,11 @@
 
     .intro {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 60px;
-      gap: 40px;
-      background: white;
       flex-wrap: wrap;
+      gap: 40px;
+      padding: 60px;
+      background: white;
+      align-items: flex-start;
     }
 
     .intro-text {
@@ -40,18 +39,19 @@
 
     .slider {
       flex: 1;
-      max-width: 100%;
+      min-width: 280px;
+      max-width: 600px;
       position: relative;
-      overflow: visible;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
     }
 
     .slide {
       display: none;
-      width: auto;
       max-width: 100%;
       height: auto;
-      display: block;
-      margin: 0 auto;
     }
 
     .slide.active {
@@ -79,6 +79,10 @@
         flex-direction: column;
         text-align: center;
       }
+
+      .slider {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -95,7 +99,7 @@
     </div>
 
     <div class="slider">
-      <img src="images/slide1.jpg.JPG" class="slide active">
+      <img src="images/slide1.jpg.JPG." class="slide active">
       <img src="images/slide2.jpg.JPG" class="slide">
       <img src="images/slide3.jpg.JPG" class="slide">
 
